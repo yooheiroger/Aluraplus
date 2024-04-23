@@ -1,13 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@400..700&family=Inter:wght@100..900&family=Jersey+20&family=Montserrat:ital@0;1&family=Sedan:ital@0;1&display=swap');
 
 :root{
     --branco-principal: #FFFFFF;
     --cinza-secundario: #c0c0c0;
     --botao-azul: #167bf7;
     --cor-pretofundo: #00030c;    
-
+    --font-principal: "inter";
+    --cor-mudar: #9ecaff;
 }
 
 body{
     background-color: var(--cor-pretofundo);
+    color: var(--branco-principal);
+    font-family: var(--font-principal);
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.principal{
+    background-image: url("assets/Background.png");
+    /* essa forma de por imagem serve mais de forma decorativa nao impacta na utilização do site */
+    background-size: cover;
+    /* contain serve para a imagem pegar todo o espaco disponivel */
+    text-align: center;
+    align-items: center;
+}   
+
+.conteiner{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 50% 50%;
+
+}
+
+.conteiner__conteudo{
+    margin:1em  ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 10% 0 10%;
+
+}
+
+.conteiner__conteudo__titulo{
+    font-size: 36px;
+    font-weight: 700;
+
+
+}
+
+.conteiner__conteudo__combo{
+    padding: 5% 20% 5% 20%;
+
+ 
+}
+
+.conteiner__botao{
+
+    background-color: var(--botao-azul);
+    border-radius: 8px;
+    font-size: 1.12rem;
+    text-decoration: none;
+    padding: 1em;
+    /* padding serve para criar uma margem interna nesse caso e a medidada é uma medida relativa a fonte */
+    color: var(--branco-principal);
+    display: block;
+    
+    margin-bottom: 1em;
+    
+
+}
+.botao_secundario{
+    background-color: transparent;
+    border: 2px solid var(--branco-principal);
+}
+.conteiner__aviso{
+    color: var(--cinza-secundario);
+    font-size: 0.75rem;
     
 }
+
+.conteiner__secundario{
+    display: grid;
+    grid-template-columns: 50% 50%;
+  
+    align-items: center;
+}
+.conteiner__imagem{
+    margin: 0 10em;
+    height:80%;
+}
+
+.conteiner__descricao{
+    margin: 1em;
+    padding: 0 5% 0 20%;
+    
+}
+.conteiner__descricao__subtitulo{
+
+    font-size: 48px;
+    color: var(--branco-principal);
+    font-weight: 700;
+
+}
+.conteiner__descricao__paragrafo{
+    font-size: 1rem;
+    color: var(--cinza-secundario);
+    font-weight: 400;
+}   
+
+.secundario__botao{
+    display: inline-block;
+}
+
+.dispositivos{
+    margin: 5em 0;
+}
+
+.dispositivos__titulo{
+    display: flex;
+    justify-content: center;
+    margin: 2em;
+    font-size: 48px;
+}
+
+.dispositivos__lista{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    list-style-type: none;
+     /*para tirar os pontinhos da lista list style type none  */
+    color: var(--branco-principal);
+}
+
+.lista__intem{
+    font-size: 2rem;
+
+}
+
+.rodape{
+    align-items: center;
+    margin: 2em;
+    text-align: center;
+}
+
+.rodape__logo{
+    align-items: center;
+    
+}
+
+
+.lista__link {
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+    
+    
+}
+.lista__link a{
+    text-decoration: none;
+}
+
+.lista__link :hover{
+    color: var(--cor-mudar);
+}
+
+.conteiner__botao:hover{
+    color: var(--cor-mudar);
+}
+    
+@media (max-width: 1000px){
+    .principal{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+    }
+    .conteiner{
+        display: flex;
+        flex-direction: column;  
+        justify-content: center;  
+    }
+    .conteiner__secundario{
+        display: flex;
+        flex-direction: column;  
+        justify-content: center;  
+    }
+    .dispositivos__lista{
+        display: flex;
+        flex-direction: column;  
+        justify-content: center;  
+    }
+}
+
